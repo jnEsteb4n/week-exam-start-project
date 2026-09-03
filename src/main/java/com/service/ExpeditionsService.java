@@ -12,4 +12,8 @@ public class ExpeditionsService {
     public void addExpedition(Expedition expedition) {
         expeditionsRepository.save(expedition);
     }
+
+    public Collection<Expedition> getExpeditions() {
+        return expeditionsRepository.findAll();
+    }
 }
