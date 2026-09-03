@@ -1,5 +1,7 @@
 package com.service;
 
+import com.example.model.Expedition;
+
 public class ExpeditionsService {
     private ExpedtionsRepository expeditionsRepository;
 
@@ -7,4 +9,7 @@ public class ExpeditionsService {
         this.expeditionsRepository = expeditionsRepository;
     }
 
+    public void addExpedition(Expedition expedition) {
+        expeditionsRepository.save(expedition);
+    }
 }
